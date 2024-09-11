@@ -92,7 +92,7 @@ button:hover {
 
 #intro h1 {
     font-size: 32px;
-    font-weight: lighter;
+    font-weight: light;
     text-align: start;
     margin-bottom: 5px;
 }
@@ -121,7 +121,8 @@ margin: 13px;
 }
 
 .education-section, .skills-section, .projects-section{
-    margin-top: 37px;    
+    margin-top: 37px;
+    margin-left: 10px;
 }
 
 .education-section, .skills-section, .projects-section h2{
@@ -135,7 +136,7 @@ ul {
 
 li {
     list-style-type:square;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-size: large;
 }
 
@@ -147,6 +148,16 @@ li {
     border-radius: 5px;
     display: inline-block;
     margin-bottom: 10px;
+}
+
+#resume-display button{
+    background-color:darkcyan;
+    color: white;
+    margin-left: 10px;
+}
+
+#resume-display button:hover{
+    background-color: darkgreen;
 }
 
 .skills {
@@ -192,8 +203,9 @@ li {
     }
 
     button {
-        width: 100%;
-        padding: 12px;
+        width: 40%;
+        padding: 10px;
+        margin: 5px;
     }
 
     h2 {
