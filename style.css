@@ -191,7 +191,7 @@ li {
 
 @media (max-width: 768px) {
     #container {
-        padding: 15px;
+        padding: 10px;
     }
 
     input, textarea {
@@ -203,9 +203,9 @@ li {
     }
 
     button {
-        width: 40%;
-        padding: 10px;
-        margin: 5px;
+        width: 44%;
+        padding: 9px;
+        margin: 7px;
     }
 
     h2 {
