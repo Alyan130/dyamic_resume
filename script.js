@@ -7,15 +7,12 @@ var form = document.getElementById("resume-form");
     var input = document.createElement("input");
     input.type = "text";
     input.classList.add("education");
-    input.placeholder = "School/College and Duration";
+    input.placeholder = "School/College";
     educationContainer.appendChild(input);
 });
 (_b = document.getElementById("remove-education")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
     var _a;
-    if ((educationContainer === null || educationContainer === void 0 ? void 0 : educationContainer.children.length) == 1) {
-        null;
-    }
-    else {
+    if ((educationContainer === null || educationContainer === void 0 ? void 0 : educationContainer.children.length) > 1) {
         (_a = educationContainer === null || educationContainer === void 0 ? void 0 : educationContainer.lastChild) === null || _a === void 0 ? void 0 : _a.remove();
     }
 });
@@ -29,10 +26,7 @@ var form = document.getElementById("resume-form");
 });
 (_d = document.getElementById("remove-skill")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () {
     var _a;
-    if ((skillsContainer === null || skillsContainer === void 0 ? void 0 : skillsContainer.children.length) == 1) {
-        null;
-    }
-    else {
+    if ((skillsContainer === null || skillsContainer === void 0 ? void 0 : skillsContainer.children.length) > 1) {
         (_a = skillsContainer === null || skillsContainer === void 0 ? void 0 : skillsContainer.lastChild) === null || _a === void 0 ? void 0 : _a.remove();
     }
 });
@@ -46,10 +40,7 @@ var form = document.getElementById("resume-form");
 });
 (_f = document.getElementById("remove-project")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", function () {
     var _a;
-    if ((projectsContainer === null || projectsContainer === void 0 ? void 0 : projectsContainer.children.length) == 1) {
-        null;
-    }
-    else {
+    if ((projectsContainer === null || projectsContainer === void 0 ? void 0 : projectsContainer.children.length) > 1) {
         (_a = projectsContainer === null || projectsContainer === void 0 ? void 0 : projectsContainer.lastChild) === null || _a === void 0 ? void 0 : _a.remove();
     }
 });
@@ -75,7 +66,7 @@ form.addEventListener('submit', function (event) {
     projectFields.forEach(function (field) {
         projectsHTML += "<li>".concat(field.value, "</li>");
     });
-    var resumeHTML = "\n        <div id=\"intro\">\n            <h1>".concat(name, "</h1>\n            <div class=\"line\"></div> \n            <p>").concat(profileSummary, "</p> \n        </div>\n        <div class=\"contact-info\">\n            <div class=\"icon\">\n                <img src=\"./1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png\" alt=\"\">\n                <p>").concat(phone, "</p>\n            </div>\n            <div class=\"icon\">\n                <img src=\"./pngwing.com (2).png\" alt=\"\">\n                <p>").concat(email, "</p>\n            </div>\n            <div class=\"icon\">\n                <img src=\"./pngwing.com (3).png\" alt=\"\">\n                <p>").concat(address, "</p>\n            </div>\n        </div>\n        <div class=\"education-section\">\n            <h2>Education:</h2>\n            <ul>\n                ").concat(educationHTML, "\n            </ul>\n        </div>\n        <div class=\"skills-section\">\n            <h2>Skills:</h2>\n            <div class=\"line\"></div>\n            <div class=\"skills\">\n                <div class=\"line\"></div>\n                ").concat(skillsHTML, "\n            </div>\n        </div>\n        <div class=\"projects-section\">\n            <h2>Projects:</h2>\n            <ul>\n                ").concat(projectsHTML, "\n            </ul>\n        </div>\n    ");
+    var resumeHTML = "\n        <div id=\"intro\">\n            <h1>".concat(name, "</h1>\n            <div class=\"line\"></div> \n            <p>").concat(profileSummary, "</p> \n        </div>\n        <div class=\"contact-info\">\n            <div class=\"icon\">\n                <img src=\"./images/1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png\" alt=\"\">\n                <p>").concat(phone, "</p>\n            </div>\n            <div class=\"icon\">\n                <img src=\"./images/pngwing.com (2).png\" alt=\"\">\n                <p>").concat(email, "</p>\n            </div>\n            <div class=\"icon\">\n                <img src=\"./images/pngwing.com (3).png\" alt=\"\">\n                <p>").concat(address, "</p>\n            </div>\n        </div>\n        <div class=\"education-section\">\n            <h2>Education:</h2>\n            <ul>\n                ").concat(educationHTML, "\n            </ul>\n        </div>\n        <div class=\"skills-section\">\n            <h2>Skills:</h2>\n            <div class=\"line\"></div>\n            <div class=\"skills\">\n                <div class=\"line\"></div>\n                ").concat(skillsHTML, "\n            </div>\n        </div>\n        <div class=\"projects-section\">\n            <h2>Projects:</h2>\n            <ul>\n                ").concat(projectsHTML, "\n            </ul>\n        </div>\n    ");
     var resumeDisplay = document.getElementById('resume-display');
     var resume = document.getElementById("container");
     resumeDisplay.innerHTML = resumeHTML;

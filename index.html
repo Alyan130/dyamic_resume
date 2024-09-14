@@ -1,25 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Editable Resume Form</title>
+    <title>Dynamic resume builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="container">
         <h1>Dynamic Resume Builder</h1>
 
         <form id="resume-form">
-          <h2>Personal information:</h2>
+            <h2>Personal information:</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" placeholder="Enter your email" required>
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone"  placeholder="Enter your number" required>
+            <input type="tel" id="phone" placeholder="Enter your number" required>
             <label for="address">Address:</label>
             <textarea id="address" rows="2" placeholder="Enter your address" required></textarea>
             <label for="profile">Profile Summary:</label>
@@ -27,7 +28,7 @@
 
             <h2>Education:</h2>
             <div id="education-container">
-                <input type="text" class="education" required>
+                <input type="text" class="education" placeholder="School/College" required>
             </div>
             <button type="button" id="add-education">+ Add Education</button>
             <button type="button" id="remove-education">- Remove Eduction </button>
@@ -48,11 +49,12 @@
             <button type="button" id="remove-project">- Remove Project</button>
 
             <button type="submit" id="generate-button">Generate Resume</button>
-            </div>
-        </form>
+    </div>
+    </form>
 
-        <div id="resume-display">
-        </div>
+    <div id="resume-display">
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
