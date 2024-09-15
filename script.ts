@@ -1,23 +1,23 @@
- const educationContainer = document.getElementById("education-container") as HTMLDivElement;
- const skillsContainer = document.getElementById("skills-container") as HTMLDivElement;
-const projectsContainer = document.getElementById("projects-container") as HTMLDivElement;
-const form=document.getElementById("resume-form") as HTMLFormElement;
+ const educationContainer = document.getElementById("educationField") as HTMLDivElement;
+ const skillsContainer = document.getElementById("skillsField") as HTMLDivElement;
+const projectsContainer = document.getElementById("projectsField") as HTMLDivElement;
+const form=document.getElementById("form") as HTMLFormElement;
 
 
-document.getElementById("add-education")?.addEventListener("click", () => {
+document.getElementById("addEducation")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.classList.add("education");
     input.placeholder = "School/College";
     educationContainer.appendChild(input);
 });
-document.getElementById("remove-education")?.addEventListener("click", () => {
+document.getElementById("removeEducation")?.addEventListener("click", () => {
     if (educationContainer?.children.length > 1) {
         educationContainer?.lastChild?.remove();
     }
 });
 
-document.getElementById("add-skill")?.addEventListener("click", () => {
+document.getElementById("addSkill")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.classList.add("skill");
@@ -26,13 +26,13 @@ document.getElementById("add-skill")?.addEventListener("click", () => {
     skillsContainer?.appendChild(input);
 });
 
-document.getElementById("remove-skill")?.addEventListener("click", () => {
+document.getElementById("removeSkill")?.addEventListener("click", () => {
     if (skillsContainer?.children.length > 1) {
         skillsContainer?.lastChild?.remove();
     }
 });
 
-document.getElementById("add-project")?.addEventListener("click", () => {
+document.getElementById("addProject")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.classList.add("project");
@@ -41,7 +41,7 @@ document.getElementById("add-project")?.addEventListener("click", () => {
     projectsContainer?.appendChild(input);
 });
 
-document.getElementById("remove-project")?.addEventListener("click", () => {
+document.getElementById("removeProject")?.addEventListener("click", () => {
     if (projectsContainer?.children.length > 1) {
         projectsContainer?.lastChild?.remove();
     }
@@ -58,19 +58,19 @@ form.addEventListener('submit', (event: Event) => {
 
     const educationFields = document.querySelectorAll('.education') as NodeListOf<HTMLInputElement>;
     let educationHTML = '';
-    educationFields.forEach(function (field: HTMLInputElement) {
+    educationFields.forEach((field: HTMLInputElement) =>{
         educationHTML += `<li>${field.value}</li>`;
     });
 
     const skillFields = document.querySelectorAll('.skill') as NodeListOf<HTMLInputElement>;
     let skillsHTML = '';
-    skillFields.forEach(function (field: HTMLInputElement) {
+    skillFields.forEach((field: HTMLInputElement)=> {
         skillsHTML += `<span class="badge">${field.value}</span>`;
     });
 
     const projectFields = document.querySelectorAll('.project') as NodeListOf<HTMLInputElement>;
     let projectsHTML = '';
-    projectFields.forEach(function (field: HTMLInputElement) {
+    projectFields.forEach((field: HTMLInputElement)=> {
         projectsHTML += `<li>${field.value}</li>`;
     });
 
@@ -80,7 +80,7 @@ form.addEventListener('submit', (event: Event) => {
             <div class="line"></div> 
             <p>${profileSummary}</p> 
         </div>
-        <div class="contact-info">
+        <div class="contactInfo">
             <div class="icon">
                 <img src="./images/1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="">
                 <p>${phone}</p>
@@ -94,13 +94,13 @@ form.addEventListener('submit', (event: Event) => {
                 <p>${address}</p>
             </div>
         </div>
-        <div class="education-section">
+        <div class="educationSection">
             <h2>Education:</h2>
             <ul>
                 ${educationHTML}
             </ul>
         </div>
-        <div class="skills-section">
+        <div class="skillsSection">
             <h2>Skills:</h2>
             <div class="line"></div>
             <div class="skills">
@@ -108,7 +108,7 @@ form.addEventListener('submit', (event: Event) => {
                 ${skillsHTML}
             </div>
         </div>
-        <div class="projects-section">
+        <div class="projectsSection">
             <h2>Projects:</h2>
             <ul>
                 ${projectsHTML}
